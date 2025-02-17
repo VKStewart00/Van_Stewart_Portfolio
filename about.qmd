@@ -3,7 +3,3 @@ title: "About"
 ---
 
 Hello my name is Van Stewart, I am studying at California State University. I am majoring in Marine Science, and will be getting a minor in data science. I am interested in bioinformatics, and curious how ideas from that field can help with learning more about our oceans.
-
-```{r}
-1 + 1
-```
