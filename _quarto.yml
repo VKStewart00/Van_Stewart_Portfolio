@@ -1,13 +1,15 @@
 project:
+  output-dir: docs
   type: website
 
 website:
-  title: "Van_Stewart_Portfolio"
+  title: "Van Stewart's Portfolio"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: "Home"
+      - href: about.qmd
+        text: "About Me"
 
 format:
   html:
