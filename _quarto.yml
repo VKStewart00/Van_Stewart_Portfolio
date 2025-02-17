@@ -1,8 +1,9 @@
 project:
-  output-dir: docs
   type: website
+  output-dir: docs
 
-website:
+
+website: 
   title: "Van Stewart's Portfolio"
   navbar:
     left:
