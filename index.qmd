@@ -12,12 +12,36 @@ about:
       href: https://github.com
 ---
 
-This is a Quarto website.
+Van Stewart is a California State University Undergraduate studying Marine and Data Science.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Education
 
-```{r}
-1 + 1
-```
+::::: {layout-ncol="2"}
+::: {layout-ncol="2"}
+Marine Science: California State University Monterrey Bay, 2024 - Current
+:::
 
-This is called a test
+Relevant coursework:
+
+Marine Science 370: Bio - Physical Oceanography
+
+Marine Science 345: Marine Biodiversity
+
+Statistics 250: Applied Stat: Sci Tech
+
+::: {layout-ncol="2"}
+Marine Science for transfer: Diablo Valley College 2021-2024
+:::
+
+Relevant coursework:
+
+Biology 126: Ecology and Field Biology
+
+Biology 130: Cellular & Molecular biology
+
+Biology 131: Evolution & Ecology
+
+General Chemistry I & II
+
+Oceanography 102: Oceanography with Lab
+:::::
