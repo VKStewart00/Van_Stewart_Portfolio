@@ -45,3 +45,9 @@ General Chemistry I & II
 
 Oceanography 102: Oceanography with Lab
 :::::
+
+**Stat 210 Final Project**
+
+Part one of the Project : [PortfolioP1](Portfolio_Project_P1.qmd)
+
+Part two of the Project : [DataCleaning](dataWork.qmd)
