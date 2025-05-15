@@ -72,7 +72,7 @@ format: html
 
 # **Next Steps**
 
--   **Download and inspect dataset**
+-   **Download and inspect data set**
 -   **Write initial cleaning scripts**
 -   **Create first draft visualizations**
 -   **Iterate based on findings**

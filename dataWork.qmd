@@ -82,7 +82,7 @@ emissionsCleanCommodity <- emissions |>
   group_by(year, commodity)|>
   mutate(avg_emissions = mean(total_emissions_MtCO2e))|>
   filter( avg_emissions >= 0)|>
-  ungroup()
+  ungroup()|>
 ```
 
 ```{r}
