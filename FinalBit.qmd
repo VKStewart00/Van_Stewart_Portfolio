@@ -6,9 +6,37 @@ author: "Van Stewart"
 ```{r}
 #|code-fold: true
 
+library(tidyverse)
 
 emissionsCleanCommodity <- read_csv('Data-clean/emissionsCleanCommodity.csv')
 emissionsCleanParent <- read_csv('Data-clean/emissionsCleanParent.csv')
+
+colorsVanLikes <- c(
+  "dodgerblue2", 
+  "#E31A1C", 
+  "green4",
+  "#6A3D9A", 
+  "skyblue2", 
+  "#FB9A99", 
+  "#CAB2D6",
+  "#FDBF6F", 
+  "maroon", 
+  "orchid1", 
+  "deeppink1", 
+  "blue1",
+  "steelblue4",
+  "darkturquoise", 
+  "green1", 
+  "darkorange4",
+  "brown",
+  "cyan",
+  "cyan4",
+  "coral",
+  "darkgreen",
+  "blue",
+  "red4",
+  "green4"
+)
 
 G1 <- emissionsCleanParent|>
   ggplot( aes( x = year,
@@ -17,12 +45,12 @@ G1 <- emissionsCleanParent|>
                color = parent_entity
                ))+
   theme_minimal()+
-  labs(
-    title = "Average Emissions Over Time by Commodity",
-    subtitle = "Mean annual emissions per commodity",
+    labs(
+    title = "Total Emissions Over Time by Parent Entity",
+    subtitle = "Annual greenhouse gas emissions in MtCO2",
     x = "Year",
-    y = "Average Emissions (MtCO₂e)",
-    color = "Commodity")+
+    y = "Total Emissions (MtCO2)",
+    color = "Parent Entity")+
   scale_color_manual(values = colorsVanLikes)+
   geom_line()
 
@@ -33,11 +61,11 @@ G2 <- emissionsCleanCommodity|>
                color = commodity
                ))+
   labs(
-    title = "Total Emissions Over Time by Parent Entity",
-    subtitle = "Annual greenhouse gas emissions in MtCO2",
+    title = "Average Emissions Over Time by Commodity",
+    subtitle = "Mean annual emissions per commodity",
     x = "Year",
-    y = "Total Emissions (MtCO2)",
-    color = "Parent Entity")+
+    y = "Average Emissions (MtCO2)",
+    color = "Commodity")+
   theme_minimal()+
   scale_color_manual(values = colorsVanLikes)+
   geom_line()
@@ -58,3 +86,4 @@ G1
 #|label: Emissions by Parents
 G2
 ```
+

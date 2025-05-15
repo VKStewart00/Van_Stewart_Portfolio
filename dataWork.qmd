@@ -5,12 +5,16 @@ editor: visual
 ---
 
 ```{r}
+#|label: Packages!
+
 library(tidyverse)
 ```
 
 ```{r}
+#|label: DataLoading
 
-# Option 1: tidytuesdayR package 
+
+
 ## install.packages("tidytuesdayR")
 
 tuesdata <- tidytuesdayR::tt_load('2024-05-21')
@@ -25,6 +29,8 @@ emissions <- tuesdata$emissions
 ```
 
 ```{r}
+#|label: Colors!
+
 
 colorsVanLikes <- c(
   "dodgerblue2", 
@@ -55,6 +61,7 @@ colorsVanLikes <- c(
 ```
 
 ```{r}
+#|label: DataCleaning
 
 
 emissionsCleanParent <- emissions |>
@@ -65,11 +72,12 @@ emissionsCleanParent <- emissions |>
               production_value, 
               production_unit
               ))|>
-  mutate(total = as.numeric(total_emissions_MtCO2e)) |>
+ mutate(total_emissions_MtCO2e = as.numeric(total_emissions_MtCO2e)) |>
   group_by(parent_entity)|>
   mutate(avg_emissions = mean(total_emissions_MtCO2e))|>
   filter( avg_emissions >= 300)|>
-  ungroup()
+  ungroup()#|>
+  #write.csv('Data-clean/emissionsCleanParent.csv')
 
 emissionsCleanCommodity <- emissions |>
   filter( year >= 1970
@@ -82,10 +90,14 @@ emissionsCleanCommodity <- emissions |>
   group_by(year, commodity)|>
   mutate(avg_emissions = mean(total_emissions_MtCO2e))|>
   filter( avg_emissions >= 0)|>
-  ungroup()|>
+  ungroup()#|>
+  #write.csv('Data-clean/emissionsCleanCommodity.csv')
 ```
 
 ```{r}
+#|label: Graphics
+
+
 
 emissionsCleanParent|>
   ggplot( aes( x = year,

@@ -51,3 +51,5 @@ Oceanography 102: Oceanography with Lab
 Part one of the Project : [PortfolioP1](Portfolio_Project_P1.qmd)
 
 Part two of the Project : [DataCleaning](dataWork.qmd)
+
+Part three of the Project: [FinalPart](FinalBit.qmd)
