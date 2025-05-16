@@ -46,7 +46,7 @@ G1 <- emissionsCleanParent|>
                ))+
   theme_minimal()+
     labs(
-    title = "Total Emissions Over Time by Parent Entity",
+    title = "Total Emissions Over Time by Parent Entity Caused by Oil and Natural Gas",
     subtitle = "Annual greenhouse gas emissions in MtCO2",
     x = "Year",
     y = "Total Emissions (MtCO2)",
@@ -81,9 +81,12 @@ G2 <- emissionsCleanCommodity|>
 G1
 ```
 
+> Figure 1: Total CO2 produced by Oil and Natural Gas Grouped by each Parent Entity, with companies with an average lower than 300 MtCO2 removed to clean up the data. Saudi Aramco has been highest constant CO2 emitter, with the second being the now defunct Soviet Union. Saudi Aramco is a state owned oil and natural gas distributor.
+
 ```{r}
 #|code-fold: true
 #|label: Emissions by Parents
 G2
 ```
 
+> Figure 2: Average CO2 per year by commodity. Since the 1970s the majority of CO2 emissions have been due to Bituminous Coal. This form of coal is the most common and have a very high carbon content, hence all the CO2 emissions. Bituminous Coal is also wildly used for electricity generation, due to the ease of access and high carbon content.
